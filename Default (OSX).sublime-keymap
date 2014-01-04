@@ -1,0 +1,46 @@
+[
+	{ "keys": ["ctrl+shift+r"], "command": "reindent" , "args": {"single_line": false}}, 	// Reindent code
+	{ "keys": ["ctrl+w"], "command": "toggle_setting", "args": {"setting": "word_wrap"}},	// Word Wrap
+	{ "keys": ["ctrl+b"], "command": "toggle_side_bar" },									// Show/Hide Sidebar
+	{ "keys": ["ctrl+alt+u"], "command": "upper_case" },									// Upper Case
+	{ "keys": ["ctrl+alt+l"], "command": "lower_case" },									// Lower Case
+	{ "keys": ["ctrl+shift+c"], "command": "toggle_comment", "args": { "block": true }},	// Insert/Remove tag comment
+    { "keys": ["ctrl+alt+b"], "command": "alignment" },
+    { "keys": ["ctrl+shift+w"], "command": "insert_snippet", "args": { "name": "Packages/XML/long-tag.sublime-snippet" } },
+	{ "keys": ["ctrl+e"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Line.sublime-macro"} },
+    {
+        "keys": [
+            "ctrl+alt+c"
+        ],
+        "args": {
+            "action": "toggle_comment"
+        },
+        "command": "run_emmet_action",
+        "context": [
+            {
+                "operand": "source.css - source.css.less, text.xml, text.html - source",
+                "operator": "equal",
+                "match_all": true,
+                "key": "selector"
+            },
+            {
+                "match_all": true,
+                "key": "emmet_action_enabled.toggle_comment"
+            }
+        ]
+    },
+    { "keys": ["ctrl+t"], "command": "side_bar_new_file2" },
+    { "keys": ["f2"], "command": "side_bar_rename" },
+    { "keys": ["ctrl+alt+f"], "command": "side_bar_find_files_path_containing" },
+
+    { "keys": ["ctrl+alt+n"], "command": "advanced_new_file_new"},
+    { "keys": ["shift+ctrl+alt+n"], "command": "advanced_new_file_new", "args": {"is_python": true}},
+    {
+        "keys": ["tab"],
+        "command": "insert",
+        "args": {"characters": "\t"},
+        "context": [{
+                "key": "setting.anf_panel"
+        }]
+    }
+]
